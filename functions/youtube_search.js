@@ -12,8 +12,7 @@ const getQueryString = params => {
 };
 
 const headers = {
-  'Access-Control-Allow-Origin':
-    'https://seojihwan.github.io/javascript-youtube-classroom',
+  'Access-Control-Allow-Origin': 'https://seojihwan.github.io',
 };
 
 exports.handler = async event => {
