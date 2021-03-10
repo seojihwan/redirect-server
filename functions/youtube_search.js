@@ -12,7 +12,7 @@ const getQueryString = params => {
 };
 
 const headers = {
-  'Access-Control-Allow-Origin': 'https://seojihwan.github.io',
+  'Access-Control-Allow-Origin': process.env.ACAO,
 };
 
 exports.handler = async event => {
