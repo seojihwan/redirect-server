@@ -12,7 +12,7 @@ const getQueryString = params => {
 };
 
 const headers = {
-  'Access-Control-Allow-Origin': process.env.ACAO,
+  'Access-Control-Allow-Origin': '*',
 };
 
 exports.handler = async event => {
