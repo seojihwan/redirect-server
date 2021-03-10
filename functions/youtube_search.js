@@ -22,7 +22,7 @@ exports.handler = async event => {
       YOUTUBE_SEARCH +
         getQueryString({
           ...queryStringParameters(event),
-          key: process.env.API_KEY,
+          // key: process.env.API_KEY,
         })
     );
 
