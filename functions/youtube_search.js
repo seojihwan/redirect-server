@@ -30,7 +30,7 @@ exports.handler = async event => {
       statusCode: 200,
       headers,
       body: JSON.stringify({
-        data: response.json(),
+        data: await response.json(),
       }),
     };
   } catch (err) {
