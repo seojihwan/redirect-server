@@ -21,7 +21,7 @@ exports.handler = async event => {
     const response = await fetch(
       YOUTUBE_SEARCH +
         getQueryString({
-          ...queryStringParameters(event),
+          ...queryStringParameters,
           key: process.env.API_KEY,
         })
     );
