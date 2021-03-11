@@ -31,6 +31,12 @@ exports.handler = async event => {
       headers,
       body: JSON.stringify({
         data: await response.json(),
+        test:
+          YOUTUBE_SEARCH +
+          getQueryString({
+            ...queryStringParameters,
+            key: process.env.API_KEY,
+          }),
       }),
     };
   } catch (err) {
