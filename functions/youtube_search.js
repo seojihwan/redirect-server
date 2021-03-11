@@ -12,7 +12,7 @@ const getQueryString = params => {
 };
 
 const headers = {
-  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Origin': process.env.ACAO,
 };
 
 exports.handler = async event => {
@@ -22,7 +22,7 @@ exports.handler = async event => {
       YOUTUBE_SEARCH +
         getQueryString({
           ...queryStringParameters(event),
-          // key: process.env.API_KEY,
+          key: process.env.API_KEY,
         })
     );
 
