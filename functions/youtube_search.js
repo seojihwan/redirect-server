@@ -29,23 +29,13 @@ exports.handler = async event => {
     return {
       statusCode: 200,
       headers,
-      body: JSON.stringify({
-        data: await response.json(),
-      }),
+      body: JSON.stringify(await response.json()),
     };
   } catch (err) {
     return {
       statusCode: err.statusCode,
       headers,
-      body: JSON.stringify({
-        error: err.message,
-        test:
-          YOUTUBE_SEARCH +
-          getQueryString({
-            ...queryStringParameters,
-            key: process.env.API_KEY,
-          }),
-      }),
+      body: JSON.stringify(err),
     };
   }
 };
