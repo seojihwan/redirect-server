@@ -8,7 +8,7 @@ const getQueryString = params => {
     queryString += `&${key}=${value}`;
   }
 
-  return queryString;
+  return decodeURI(queryString);
 };
 
 const headers = {
